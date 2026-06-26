@@ -1,0 +1,225 @@
+.registrar-producto-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrar-producto {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.registrar-producto h1 {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.registrar-producto h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.registrar-producto h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.mensaje {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.mensaje.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #c62828;
+}
+
+.mensaje.exito {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #4CAF50;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grupo-campos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.grupo-campos.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-registrar {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-registrar:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-registrar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.confirmacion {
+  text-align: center;
+}
+
+.detalle-producto {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.detalle-producto p {
+  margin: 12px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.detalle-producto strong {
+  color: #333;
+  display: inline-block;
+  min-width: 120px;
+}
+
+.qr-section {
+  margin: 30px 0;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.qr-code {
+  max-width: 250px;
+  height: auto;
+  margin: 20px 0;
+  border: 2px solid #ddd;
+  padding: 10px;
+  background: white;
+}
+
+.btn-descargar {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-descargar:hover {
+  background: #45a049;
+}
+
+.btn-nuevo {
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-nuevo:hover {
+  background: #764ba2;
+}
+
+@media (max-width: 600px) {
+  .registrar-producto {
+    padding: 20px;
+  }
+
+  .registrar-producto h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .grupo-campos.dos-columnas {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-code {
+    max-width: 200px;
+  }
+}
