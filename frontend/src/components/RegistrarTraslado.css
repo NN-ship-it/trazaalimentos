@@ -1,0 +1,190 @@
+.registrar-traslado-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrar-traslado {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.registrar-traslado h1 {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.registrar-traslado .subtitulo {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.registrar-traslado h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.mensaje {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.mensaje.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #c62828;
+}
+
+.mensaje.exito {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #4CAF50;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grupo-campos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.grupo-campos.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-registrar {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-registrar:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-registrar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.confirmacion {
+  text-align: center;
+}
+
+.detalle-traslado {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.detalle-traslado p {
+  margin: 12px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.detalle-traslado strong {
+  color: #333;
+  display: inline-block;
+  min-width: 150px;
+}
+
+.btn-nuevo {
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-nuevo:hover {
+  background: #764ba2;
+}
+
+@media (max-width: 600px) {
+  .registrar-traslado {
+    padding: 20px;
+  }
+
+  .registrar-traslado h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .grupo-campos.dos-columnas {
+    grid-template-columns: 1fr;
+  }
+}

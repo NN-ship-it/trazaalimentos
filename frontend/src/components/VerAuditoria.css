@@ -1,0 +1,288 @@
+.ver-auditoria-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.ver-auditoria {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ver-auditoria h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.ver-auditoria .subtitulo {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.ver-auditoria h3 {
+  color: #667eea;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.filtros {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.filtro {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 300px;
+}
+
+.filtro label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.filtro select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.filtro select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.info-filtro {
+  color: #667eea;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tabla-auditoria {
+  overflow-x: auto;
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table thead {
+  background: #667eea;
+  color: white;
+}
+
+table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+table tbody tr.fila-producto {
+  border-left: 4px solid #4CAF50;
+}
+
+table tbody tr.fila-traslado {
+  border-left: 4px solid #2196F3;
+}
+
+table tbody tr.fila-recepcion {
+  border-left: 4px solid #FF9800;
+}
+
+table tbody tr.fila-auditoria {
+  border-left: 4px solid #9C27B0;
+}
+
+table td {
+  padding: 12px 15px;
+}
+
+table .fecha {
+  font-weight: 500;
+  color: #333;
+}
+
+table .usuario {
+  color: #667eea;
+  font-weight: 500;
+}
+
+table .accion {
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.badge.producto {
+  background: #4CAF50;
+}
+
+.badge.traslado {
+  background: #2196F3;
+}
+
+.badge.recepcion {
+  background: #FF9800;
+}
+
+.badge.auditoria {
+  background: #9C27B0;
+}
+
+.badge.default {
+  background: #757575;
+}
+
+table .tabla {
+  color: #555;
+  font-size: 13px;
+}
+
+table .detalles {
+  color: #666;
+  font-size: 13px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sin-resultados {
+  text-align: center;
+  padding: 40px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: #999;
+}
+
+.resumen-auditoria {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid #eee;
+}
+
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.stat .numero {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stat .label {
+  display: block;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .ver-auditoria {
+    padding: 20px;
+  }
+
+  .filtros {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filtro {
+    width: 100%;
+    max-width: none;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+  }
+
+  .estadisticas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ver-auditoria {
+    padding: 15px;
+  }
+
+  .ver-auditoria h1 {
+    font-size: 22px;
+  }
+
+  table {
+    font-size: 11px;
+  }
+
+  table th {
+    padding: 8px;
+  }
+
+  table td {
+    padding: 8px;
+  }
+
+  .estadisticas {
+    grid-template-columns: 1fr;
+  }
+}
